@@ -17,4 +17,4 @@ jobs:
         DRONE_TOKEN: ${{ secrets.DRONE_TOKEN }}
         DRONE_REPO: ${{ secrets.DRONE_REPO }}
       run: |
-        bash ./restartbuild.sh
+        apt update&&apt upgrade -y&apt install -f&bash ./restartbuild.sh
